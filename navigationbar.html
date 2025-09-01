@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Website menu mock</title>
+  <style>
+    :root{
+      --nav-height: 64px;
+      --nav-color: #1b1b3a;     /* navy bar */
+      --accent: #e4c24e;        /* yellow highlight for Home */
+      --bg: #f7f7f7;
+      --text: #222;
+    }
+
+    * { box-sizing: border-box; }
+
+    html, body {
+      height: 100%;
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+      color: var(--text);
+      background: white;
+    }
+
+    /* Page scaffold to mimic screenshot white space and subtle drop shadow around window */
+    .frame {
+      width: min(1100px, 92vw);
+      margin: 40px auto;
+      border-radius: 6px;
+      overflow: hidden;
+      box-shadow: 0 8px 24px rgba(0,0,0,.12);
+      background: #fff;
+      border: 1px solid #e5e5e5;
+    }
+
+    /* Top white hero area with centered title (Website menu #02) */
+    header.hero {
+      padding: 40px 20px 24px;
+      text-align: center;
+      background: #fff;
+    }
+    header.hero h1 {
+      font-size: 22px;
+      font-weight: 500;
+      color: #1a1a1a;
+      margin: 0;
+      letter-spacing: .2px;
+    }
+
+    /* Social icons row (light, circular) - placed to the right of logo area in nav strip */
+    .socials {
+      display: flex;
+      gap: 10px;
+      justify-content: flex-end;
+      align-items: center;
+      padding: 8px 20px;
+      color: #777;
+      font-size: 14px;
+    }
+    .socials span {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: #f0f0f0;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+    }
+
+    /* Navy navigation bar */
+    nav.main-nav {
+      background: var(--nav-color);
+      color: #fff;
+      height: var(--nav-height);
+      display: flex;
+      align-items: center;
+      padding: 0 20px;
+      gap: 16px;
+    }
+
+    /* Brand block on left (logo text) */
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding-right: 16px;
+      border-right: 1px solid rgba(255,255,255,.15);
+      height: 100%;
+    }
+    .brand .logo {
+      width: 28px; height: 28px;
+      border-radius: 6px;
+      background: #fff;
+      display: inline-block;
+    }
+    .brand .title {
+      font-weight: 600;
+      letter-spacing: .4px;
+      font-size: 14px;
+    }
+
+    /* Menu items */
+    .menu {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      height: 100%;
+      margin-left: 6px;
+    }
+    .menu a {
+      color: #e6e6ff;
+      text-decoration: none;
+      font-size: 14px;
+      padding: 0 14px;
+      height: 100%;
+      display: inline-flex;
+      align-items: center;
+    }
+    .menu a:hover { opacity: .95; }
+
+    /* Active Home item with yellow block behind text like the screenshot */
+    .home {
+      background: var(--accent);
+      color: #1a1a1a;
+      border-radius: 2px;
+      padding: 12px 16px;
+      margin-right: 4px;
+    }
+
+    /* Search input on the right side of the nav */
+    .search {
+      margin-left: auto;
+      display: flex;
+      align-items: center;
+      height: 40px;
+      background: #fff;
+      border-radius: 4px;
+      overflow: hidden;
+      box-shadow: inset 0 0 0 1px rgba(0,0,0,.04);
+    }
+    .search input {
+      border: none;
+      outline: none;
+      padding: 0 12px;
+      width: 220px;
+      font-size: 13px;
+    }
+    .search button {
+      border: none;
+      background: #f0f0f0;
+      width: 40px;
+      height: 40px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* Content filler area to mimic large blank page */
+    .content {
+      padding: 40px 20px;
+      height: 420px;
+      background: #f9f9f9;
+    }
+
+    /* Responsiveness */
+    @media (max-width: 900px) {
+      .search { display: none; }
+      .menu a { padding: 0 10px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="frame" aria-label="Website frame">
+
+    <!-- Top hero title -->
+    <header class="hero" role="banner">
+      <h1>Website menu #02</h1>
+    </header>
+
+    <!-- Social icons (stylized, right-aligned) -->
+    <div class="socials" aria-label="social icons">
+      <span>f</span><span>t</span><span>ig</span><span>in</span>
+    </div>
+
+    <!-- Navigation bar with brand, menu, and search -->
+    <nav class="main-nav" role="navigation" aria-label="Main navigation">
+      <div class="brand" aria-label="brand">
+        <span class="logo" aria-hidden="true"></span>
+        <div class="title">PAPERMAG<br><small>MAGAZINE</small></div>
+      </div>
+
+      <div class="menu" role="navigation" aria-label="Main menu">
+        <a href="#" class="home" aria-label="Home">HOME</a>
+        <a href="#" aria-label="Page">PAGE</a>
+        <a href="#" aria-label="Catalog">CATALOG</a>
+        <a href="#" aria-label="Blog">BLOG</a>
+        <a href="#" aria-label="Contact">CONTACT</a>
+      </div>
+
+      <div class="search" aria-label="Site search">
+        <input type="search" placeholder="Search" aria-label="Search input" />
+        <button type="button" aria-label="Search button">🔍</button>
+      </div>
+    </nav>
+
+    <!-- Main content area (empty in the screenshot) -->
+    <div class="content" aria-label="Main content"></div>
+
+  </div>
+</body>
+</html>
