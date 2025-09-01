@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Box with Circles</title>
+<style>
+    body {
+    font-family: Arial, sans-serif;
+    background: #f8f8f8;
+    }
+
+    /* Outer main box */
+    fieldset {
+    width: 300px;
+    margin: 60px auto;
+    padding: 20px;
+    border: 2px solid #333;
+    border-radius: 10px;
+    background: white;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    legend {
+    font-size: 18px;
+    font-weight: bold;
+    color: #1c1c3c;
+    padding: 0 10px;
+    }
+
+    /* Circle container */
+    .circle {
+    width: 120px;
+    height: 120px;
+    margin: 20px auto;
+    border: 3px solid #1c1c3c;
+    border-radius: 50%;
+    overflow: hidden;
+    padding: 5px;
+    }
+
+    /* Image inside circle */
+    .circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    }
+</style>
+</head>
+<body>
+
+<!-- Box -->
+<fieldset>
+    <legend>Boxes</legend>
+
+    <!-- Circles -->
+    <div class="circle">
+    <img src="https://tse3.mm.bing.net/th/id/OIP.P0Zjf6tyBGs1lysJndgTVgHaE8?pid=Api&P=0&h=180" alt="Photo1">
+    </div>
+    <div class="circle">
+    <img src="https://tse4.mm.bing.net/th/id/OIP.Kgb00CppWEx3SyjucN8_JQHaEo?pid=Api&P=0&h=180" alt="Photo2">
+    </div>
+    <div class="circle">
+    <img src="https://tse3.mm.bing.net/th/id/OIP.kFchJLdh-JXqv3Rzvf73PAHaNK?pid=Api&P=0&h=180" alt="Photo3">
+    </div></fieldset>
+
+</body>
+</html>
